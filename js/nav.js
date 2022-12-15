@@ -1,52 +1,23 @@
 export const nav = () => {
-    const companiesList = document.querySelector('.companies__list')
-    const companiesSection = document.querySelector('.companies')
-    const queueDelay = 100
-    const animationDuration = 300
-    let isOpening = false
-    let isClosing = false
+    const openButton = document.getElementById('nav-bar')
+    const closeButton = document.getElementById('nav-close')
+    const nav = document.getElementById('nav')
 
-    function open() {
-        isOpening = true
-        Array.from(companiesList.children).map((item, index) => setTimeout(() => {
-            item.classList.add('open')
-            index === companiesList.children.length - 1 ? isOpening = false : 1
-            isClosing ? close() : 1
-        }, index * queueDelay))
-    }
+    openButton.addEventListener('click', (e) => {
+        e.stopPropagation()
+        nav.classList.add('open')
+    })
 
-    function close() {
-        isClosing = true
-        if (!isOpening) {
-            companiesSection.classList.add('disabled')
-            setTimeout(() => {
-                companiesSection.classList.remove('disabled')
-            }, (companiesList.children.length + 1) * queueDelay)
+    closeButton.addEventListener('click', (e) => {
+        nav.classList.remove('open')
+    })
 
-            Array.from(companiesList.children).reverse().map((item, index) => setTimeout(() => {
-                item.classList.add('closing')
-                item.classList.remove('open')
-                setTimeout(() => {
-                    item.classList.remove('closing')
-                }, animationDuration)
-                index === companiesList.children.length - 1 ? isClosing = false : 1
-            }, index * queueDelay))
-        }
-    }
+    document.body.addEventListener('click', (e) => {
+        nav.classList.remove('open')
+    })
 
-    companiesSection.addEventListener('mouseenter', open)
-    companiesSection.addEventListener('mouseleave', close)
-
-
-    const links = document.getElementsByTagName('a')
-    Array.from(links).forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            // console.log(this.hash)
-            document.querySelector(this.hash).scrollIntoView({
-            behavior: "smooth"
-            });
-        })
+    nav.addEventListener('click', (e) => {
+        e.stopPropagation()
     })
 
 }

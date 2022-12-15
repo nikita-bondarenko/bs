@@ -17,54 +17,65 @@
 </head>
 <body>
 <main>
+    <div id="cookie" class="cookie border_radius">
+        <h4 class="cookie__title">Мы используем cookie, чтобы пользоваться сайтом было удобно</h4>
+        <button id="cookie-agree" class="cookie__button button">Хорошо</button>
+    </div>
     <div class="web-decor-top">
         <div id="particles-js"></div>
         <div class="web-decor-top__angle"></div>
-        <nav class="nav ">
-            <ul class="nav__list container">
-                <li class="nav__item icon-logo-small"></li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#about">О нас</a>
-                </li>
-                <li class="nav__item companies">
-                    <span class="companies__title icon-arrow">Компании</span>
-                    <ul class="companies__list">
-                        <li class="companies__item">
-                            <a href="#coex" class="companies__link">COEX</a>
+        <header class="header">
+            <div class="header__body container">
+                <div class="header__logo icon-logo-small"></div>
+                <button id="nav-bar" class="header__bar icon-bar"></button>
+                <nav id="nav" class="nav">
+                    <button id="nav-close" class="nav__close icon-cross"></button>
+                    <ul class="nav__list ">
+                        <li class="nav__item">
+                            <a class="nav__link" href="#about">О нас</a>
                         </li>
-                        <li class="companies__item">
-                            <a href="#coexmt" class="companies__link">COEX MT</a>
+                        <li class="nav__item companies">
+                            <span id="companies-open" class="companies__title icon-arrow">Компании</span>
+                            <ul class="companies__list">
+                                <li class="companies__item">
+                                    <a href="#coex" class="companies__link">COEX</a>
+                                </li>
+                                <li class="companies__item">
+                                    <a href="#coexmt" class="companies__link">COEX MT</a>
+                                </li>
+                                <li class="companies__item">
+                                    <a href="#swap" class="companies__link">Swapster</a>
+                                </li>
+                                <li class="companies__item">
+                                    <a href="#senses" class="companies__link">Seven Senses</a>
+                                </li>
+                                <li class="companies__item">
+                                    <a href="#side" class="companies__link">Right Side</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="companies__item">
-                            <a href="#swap" class="companies__link">Swapster</a>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#contacts">Контакты</a>
                         </li>
-                        <li class="companies__item">
-                            <a href="#senses" class="companies__link">Seven Senses</a>
-                        </li>
-                        <li class="companies__item">
-                            <a href="#side" class="companies__link">Right Side</a>
-                        </li>
+                        <li class="nav__item icon-globe">RU</li>
                     </ul>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="#contacts">Контакты</a>
-                </li>
-                <li class="nav__item icon-globe">RU</li>
-            </ul>
-        </nav>
+                </nav>
+            </div>
+        </header>
+
         <section id="hero" class="hero container">
             <dib class="hero__top">
                 <div class="hero__logo icon-logo-small"></div>
                 <h1 class="hero__title">bs группа компаний</h1>
             </dib>
 
-            <a href="" class="hero__button button">Узнать о компании</a>
+            <a href="#about" class="hero__button button">Узнать о компании</a>
         </section>
         <section id="about" class="about container">
             <p class="about__description">BS Company — симбиоз профессионализма, многолетнего опыта и современного
                 подхода к ведению бизнеса.
             </p>
-            <p class="about__subdescription"> Мощная юридическая база, финансовая грамотность и передовые информационные&nbsp;технологии
+            <p class="about__subdescription"> Мощная юридическая база, финансовая&nbsp;грамотность и передовые информационные&nbsp;технологии
                 — верхушка айсберга в нашем арсенале возможностей</p>
             <ul class="about__list">
                 <li class="about__item border_radius">
@@ -122,7 +133,7 @@
         </div>
         <div class="coex__map map">
             <div class="container">
-                <a class="button coex__button">Узнать о компании</a>
+                <a href="https://Coex.finance" target="_blank" class="button coex__button">Узнать о компании</a>
             </div>
             <picture class="map__picture parent-size">
                 <source class="map__image" srcset="./img/map-mobile-1x.png 1x, ./img/map-mobile-2x.png 2x"
@@ -131,9 +142,9 @@
             </picture>
         </div>
         <div class="container">
-            <div class="coex__title title">
+            <div class="coex__title second title">
                 <div class="title__logo coex__logo icon-coex"></div>
-                <h2 class="title__text">Криптовалютные операции для юридических лиц</h2>
+                <h2 class="title__text ">Криптовалютные операции для юридических лиц</h2>
             </div>
             <ul class="coex__cases cases">
                 <li class="cases__item">
@@ -240,11 +251,11 @@
                             </li>
                             <li class="swapster__item">
                                 <span class="swapster__decor icon-sign"></span>
-                                Автоматические выплаты фиата на&nbsp;банковские карты — RUB, EUR
+                                Автоматические выплаты фиата на&nbsp;банковские карты —&nbsp;RUB, EUR
                             </li>
                             <li class="swapster__item">
                                 <span class="swapster__decor icon-sign"></span>
-                                Встроенная AML-проверка кошельков и транзакций на риски
+                                Встроенная AML-проверка кошельков и транзакций на&nbsp;риски
                             </li>
                             <li class="swapster__item">
                                 <span class="swapster__decor icon-sign"></span>
@@ -255,7 +266,8 @@
                                 Партнёрская программа&nbsp;– возвращаем 30% прибыли от&nbsp;обменов рефералов
                             </li>
                         </ul>
-                        <button class="swapster__button button">Узнать о компании</button>
+                        <a href="https://swapster.fi/" target="_blank" class="swapster__button button">Узнать о
+                            компании</a>
                     </div>
                 </div>
             </section>
@@ -299,7 +311,8 @@
                                          srcset="./img/decor-desktop-2x.png 2x"
                                          alt="Отель">
                                 </picture>
-                                <button class="senses__button button">Узнать о компании</button>
+                                <a href="https://7senses.io/" target="_blank" class="senses__button button">Узнать о
+                                    компании</a>
                             </div>
                         </div>
                     </div>
@@ -312,8 +325,7 @@
                     <div class="title__logo side__logo">
                         <img class="title__image" src="./img/right-side-logo.png" alt="Right Side Лого">
                     </div>
-                    <h2 class="title__text">Ваш персональный юрист по гражданскому праву и экономическим
-                        преступлениям</h2>
+                    <h2 class="title__text">Ваш персональный юрист по гражданскому праву и экономическим&nbsp;преступлениям</h2>
                 </div>
                 <div class="side__body">
                     <ul class="side__list">
@@ -347,7 +359,7 @@
                              alt="Отель">
                     </picture>
                 </div>
-                <button class="side__button button">Узнать о компании</button>
+                <a href="https://rightside.legal/" target="_blank" class="side__button button">Узнать о компании</a>
             </div>
         </section>
     </div>
@@ -391,7 +403,7 @@
                 <div class="form__section">
                     <div class="form__block">
                         <label class="form__label" for="textarea">Ваш комментарий</label>
-                        <textarea class="form__input form__textarea" name="textarea" rows="4" id="textarea"  type="text"
+                        <textarea class="form__input form__textarea" name="textarea" rows="4" id="textarea" type="text"
                                   placeholder="Напишите свой вопрос"></textarea>
                     </div>
                 </div>

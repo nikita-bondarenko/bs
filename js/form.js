@@ -49,7 +49,6 @@ export const form = () => {
         e.preventDefault()
         if (!isPopupOpen) {
             const isFormValid = validateForm(form)
-            console.log(isFormValid)
             if (isFormValid) {
                 openPopup()
                 sendMail()
@@ -68,12 +67,14 @@ export const form = () => {
         formData.append('phone', form.phone.value.trim())
         formData.append('comment', form.textarea.value.trim())
 
-        fetch('mail.php', {
+        fetch('../example.php', {
             method: 'POST',
-            body: formData
+            body: formData,
+            headers: {
+                'Content-type': 'application/json'
+            }
         }).then(res => console.log(res)).catch(e => console.log(e))
 
-        console.log(formData)
     }
 
 
