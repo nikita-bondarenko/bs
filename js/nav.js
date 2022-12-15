@@ -15,7 +15,7 @@ export const nav = () => {
         }, index * queueDelay))
     }
 
-    function close()  {
+    function close() {
         isClosing = true
         if (!isOpening) {
             companiesSection.classList.add('disabled')
@@ -35,7 +35,18 @@ export const nav = () => {
     }
 
     companiesSection.addEventListener('mouseenter', open)
-
     companiesSection.addEventListener('mouseleave', close)
+
+
+    const links = document.getElementsByTagName('a')
+    Array.from(links).forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            // console.log(this.hash)
+            document.querySelector(this.hash).scrollIntoView({
+            behavior: "smooth"
+            });
+        })
+    })
 
 }

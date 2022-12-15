@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/iconsfont.css">
     <link rel="stylesheet" href="./css/particles.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script defer src="https://unpkg.com/imask@6.4.3/dist/imask.js"></script>
     <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script defer type="module" src="./js/main.js"></script>
 </head>
@@ -354,29 +355,45 @@
         <div id="particles-js2"></div>
         <div class="web-decor-bottom__angle"></div>
         <section id="contacts" class="letter container">
+            <div id="popup" class="letter__popup popup border_radius">
+                <button id="popup-close" class="popup__close"></button>
+                <h4 class="popup__title">Спасибо за заявку</h4>
+                <p class="popup__text">мы свяжемся с вами в ближайшее время</p>
+                <h4 class="popup__title error">Произошла ошибка при отправке</h4>
+                <p class="popup__text error">заполните корректно все необходимые поля</p>
+            </div>
             <p class="letter__text">
-                По любым вопросам пишите нам в <a class="letter__link" href="https://telegram.me/bs_comp" target="_blank">Telegram</a> для бесплатной первичной
+                По любым вопросам пишите нам в <a class="letter__link" href="https://telegram.me/bs_comp"
+                                                  target="_blank">Telegram</a> для бесплатной первичной
                 консультации <span class="letter__strong">или оставьте заявку на сайте</span>.
             </p>
             <form id="form" class="letter__form form" action="">
-                <div class="form__section form__block">
-                    <label class="form__label" for="name">Введите ваше имя</label>
-                    <input class="form__input" id="name" type="text" placeholder="Имя">
+                <div class="form__section">
+                    <div class="form__block">
+                        <label class="form__label" for="name">Введите ваше имя</label>
+                        <input class="form__input" name="name" id="name" type="text" placeholder="Имя">
+                        <span class="form__error"></span>
+                    </div>
                 </div>
                 <div class="form__section form__middle">
                     <div class="form__block">
                         <label class="form__label" for="email">Email</label>
-                        <input class="form__input" id="email" type="email" placeholder="best_User@gmail.com">
+                        <input class="form__input" id="email" name="email" type="email"
+                               placeholder="best_User@gmail.com">
+                        <span class="form__error"></span>
                     </div>
                     <div class="form__block">
                         <label class="form__label" for="phone">Телефон</label>
-                        <input class="form__input" id="phone" type="tel" placeholder="+ 7 (999) 999 99-99">
+                        <input class="form__input" id="phone" name="phone" type="tel" placeholder="+ 7 (999) 999 99-99">
+                        <span class="form__error"></span>
                     </div>
                 </div>
-                <div class="form__section form__block">
-                    <label class="form__label" for="text">Телефон</label>
-                    <textarea class="form__input form__textarea" rows="4" id="text" type="text"
-                              placeholder="Напишите свой вопрос"></textarea>
+                <div class="form__section">
+                    <div class="form__block">
+                        <label class="form__label" for="textarea">Ваш комментарий</label>
+                        <textarea class="form__input form__textarea" name="textarea" rows="4" id="textarea"  type="text"
+                                  placeholder="Напишите свой вопрос"></textarea>
+                    </div>
                 </div>
                 <button type="submit" class="button form__button ">Отправить <span class="button__arrow">→</span>
                 </button>
@@ -387,7 +404,8 @@
                 <div class="footer__top">
                     <div class="footer__left">
                         <span class="icon-logo-small footer__logo"></span>
-                        <a class="button footer__button " href="https://telegram.me/bs_comp" target="_blank"> <span class="icon-teleg"></span> Telegram</a>
+                        <a class="button footer__button " href="https://telegram.me/bs_comp" target="_blank"> <span
+                                class="icon-teleg"></span> Telegram</a>
                     </div>
                     <ul class="footer__list">
                         <li class="footer__item">
@@ -406,10 +424,12 @@
                         © 2022 BS Company Group
                     </li>
                     <li class="bottom__item">
-                        <a class="bottom__link" href="./files/BS%20Политика%20конфиденциальности.pdf" download="">Политика конфиденциальности</a>
+                        <a class="bottom__link" href="./files/BS%20Политика%20конфиденциальности.pdf" download="">Политика
+                            конфиденциальности</a>
                     </li>
                     <li class="bottom__item">
-                        <a class="bottom__link" href="./files/BS%20Пользовательское%20Соглашение.pdf" download="">Пользовательское соглашение</a>
+                        <a class="bottom__link" href="./files/BS%20Пользовательское%20Соглашение.pdf" download="">Пользовательское
+                            соглашение</a>
                     </li>
                 </ul>
             </div>

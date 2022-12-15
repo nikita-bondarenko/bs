@@ -73,6 +73,7 @@
     --rs-link: rgba(168, 173, 147, 0.7);
     --ss-link: linear-gradient(90.7deg, #1F49E4 3.95%, #762ACC 100%);
     --submit-button: #3498A2;
+    --error: #EE4B2B;
 }
 
 * {
@@ -111,7 +112,7 @@ main {
 }
 
 html {
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
 }
 
 img {
@@ -337,11 +338,11 @@ picture {
     z-index: 100;
 }
 
-.companies__link, .nav__link, .footer__link, .bottom__link, .button {
+.companies__link, .nav__link, .footer__link, .bottom__link, .button, .popup__close {
     transition: opacity .3s ease-in-out;
 }
 
-.companies__link:hover, .nav__link:hover, .footer__link:hover, .bottom__link:hover, .button:hover {
+.companies__link:hover, .nav__link:hover, .footer__link:hover, .bottom__link:hover, .button:hover, .popup__close:hover {
     opacity: .6;
 
 }
@@ -675,7 +676,6 @@ picture {
 
 .web-decor-middle {
     position: relative;
-    padding-top: 265px;
 }
 
 .web-decor-middle__angle {
@@ -861,6 +861,7 @@ picture {
 .swapster {
     position: relative;
     margin-bottom: 83px;
+    padding-top: 265px;
 }
 
 .swapster__shadow {
@@ -1017,13 +1018,10 @@ picture {
     background: rgba(168, 173, 147, 0.7);
 }
 
-.web-decor-bottom {
-
-}
 
 .web-decor-bottom {
     position: relative;
-    padding-top: 165px;
+    /*padding-top: 165px;*/
 }
 
 .web-decor-bottom__angle {
@@ -1072,7 +1070,109 @@ picture {
     gap: 100px;
     flex-wrap: wrap;
     margin-bottom: 108px;
+    padding-top: 165px;
+    position: relative;
 }
+
+.letter__popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.popup {
+    z-index: 10;
+    width: 1012px;
+    padding-top: 123px;
+    padding-bottom: 74px;
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.popup__title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+
+.popup__text {
+    font-size: 25px;
+    line-height: 30px;
+}
+
+
+.popup__close {
+    cursor: pointer;
+    position: absolute;
+    top: 23px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background: no-repeat center / contain url("../img/cross.svg");
+}
+
+
+.popup__close::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+
+}
+
+.popup__title.error, .popup__text.error {
+    color: var(--error);
+    display: none;
+}
+
+.popup.error .popup__title.error, .popup.error .popup__text.error {
+    display: block;
+}
+
+.popup.error .popup__title, .popup.error .popup__text {
+    display: none;
+}
+
+.popup.open {
+    animation: appearPopup .3s ease-in-out;
+    display: flex;
+}
+
+.popup.closing {
+    animation: disappearPopup .3s ease-in-out;
+    display: flex;
+}
+
+@keyframes appearPopup {
+    from {
+        opacity: 0;
+        transform: translate(50%, -30%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -30%);
+    }
+}
+
+@keyframes disappearPopup {
+    from {
+
+        opacity: 1;
+        transform: translate(-50%, -30%);
+    }
+    to {
+        opacity: 0;
+        transform: translate(-150%, -30%);
+    }
+}
+
 
 .letter__text {
     max-width: 544px;
@@ -1100,17 +1200,36 @@ picture {
 .form__section {
     padding-bottom: 36px;
     width: 718px;
-    display: flex;
-    flex-direction: column;
+
 }
 
 .form__section:first-child {
     padding-bottom: 50px;
 }
 
+.form__block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__error {
+    display: block;
+    position: absolute;
+    bottom: -23px;
+    left: 28px;
+    font-size: 20px;
+    white-space: nowrap;
+    line-height: 1.2;
+    color: var(--error);
+    font-weight: 400;
+    z-index: 2;
+}
+
 .form__middle {
     flex-direction: row;
     gap: 22px;
+    display: flex;
 }
 
 .form__label {
@@ -1124,7 +1243,7 @@ picture {
     outline: none;
 }
 
-.form__middle .form__input {
+.form__middle .form__block {
     max-width: 348px;
 }
 
@@ -1139,6 +1258,10 @@ picture {
     font-size: 25px;
     line-height: 130%;
 
+}
+
+.form__input.error {
+    border-color: var(--error);
 }
 
 .form__input::placeholder {
@@ -1238,6 +1361,8 @@ picture {
 
     border-bottom: 0.5px solid var(--white);
 }
+
+
 
 
 
