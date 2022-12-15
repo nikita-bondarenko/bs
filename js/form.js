@@ -61,22 +61,17 @@ export const form = () => {
 
     function sendMail() {
 
-        const name = form.name.value.trim()
-        const email = form.email.value.trim()
-        const phone = form.phone.value.trim()
-        const comment = form.textarea.value.trim()
+        const formData = new FormData ()
 
-        const formData = {
-            name,
-            email,
-            phone,
-            comment
-        }
+        formData.append('name', form.name.value.trim())
+        formData.append('email', form.email.value.trim())
+        formData.append('phone', form.phone.value.trim())
+        formData.append('comment', form.textarea.value.trim())
 
-        fetch('php/mail.php', {
+        fetch('mail.php', {
             method: 'POST',
             body: formData
-        })
+        }).then(res => console.log(res)).catch(e => console.log(e))
 
         console.log(formData)
     }

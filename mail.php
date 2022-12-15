@@ -2,13 +2,14 @@
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 
-	require 'phpmailer/src/Exception.php';
-	require 'phpmailer/src/PHPMailer.php';
+	require 'PHPMailer/src/Exception.php';
+	require 'PHPMailer/src/PHPMailer.php';
 
 	$mail = new PHPMailer(true);
 	$mail->CharSet = 'UTF-8';
 	$mail->setLanguage('ru', 'phpmailer/language/');
 	$mail->IsHTML(true);
+	$mail->Port = 587;
 
 	//От кого письмо
 	$mail->setFrom('naradadasosmi@gmail.com', 'BS группа компаний');
