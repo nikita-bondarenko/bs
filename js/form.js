@@ -67,13 +67,26 @@ export const form = () => {
         formData.append('phone', form.phone.value.trim())
         formData.append('comment', form.textarea.value.trim())
 
-        fetch('../example.php', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Content-type': 'application/json'
-            }
-        }).then(res => console.log(res)).catch(e => console.log(e))
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/post.php', true);
+        xhr.send(formData);
+
+        // xhr.onload = function () {
+        //     let res = JSON.parse(this.response);
+        //     if (res.Result == 'ok') {
+        //       console.log('ok')
+        //     } else if (res.Result == 'error') {
+        //         console.log('error')
+        //     }
+        // };
+
+        // fetch('../example.php', {
+        //     method: 'POST',
+        //     body: formData,
+        //     headers: {
+        //         'Content-type': 'application/json'
+        //     }
+        // }).then(res => console.log(res)).catch(e => console.log(e))
 
     }
 
@@ -107,7 +120,6 @@ function validateForm(form) {
         removeError(input.id)
         const isPhoneError = () => {
             const stringOfNumbers = input.value.trim().split('').reduce((str, item) => Number(item) ? str + item : str, '')
-            console.log(stringOfNumbers)
             return stringOfNumbers.length !== 11
         }
         const isEmailError = !input.value.includes('.') || !input.value.includes('@')

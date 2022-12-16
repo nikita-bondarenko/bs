@@ -112,7 +112,7 @@ main {
 }
 
 html {
-    /*scroll-behavior: smooth;*/
+    scroll-behavior: smooth;
 }
 
 img {
@@ -531,7 +531,7 @@ picture {
 
 .map {
     position: relative;
-    height: 538px;
+    height: 28vw;
 }
 
 .parent-size {
@@ -1070,6 +1070,7 @@ picture {
     margin-bottom: 108px;
     padding-top: 165px;
     position: relative;
+    pointer-events: none;
 }
 
 .letter__popup {
@@ -1077,6 +1078,7 @@ picture {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -30%);
+    pointer-events: auto;
 }
 
 .cookie {
@@ -1086,8 +1088,8 @@ picture {
     left: 50%;
     transform: translateX(-50%);
     width: 1012px;
-    padding-top: 123px;
-    padding-bottom: 74px;
+    padding-top: 80px;
+    padding-bottom: 40px;
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(40px);
@@ -1113,6 +1115,8 @@ picture {
 
 .cookie__button {
     background: var(--submit-button);
+    min-height: 60px;
+    min-width: 270px;
 }
 
 .cookie.open {
@@ -1573,7 +1577,7 @@ picture {
     }
 
     .map {
-        height: 419px;
+        margin-top: 30px;
     }
 
     .swapster__body {
@@ -1858,6 +1862,7 @@ picture {
 
     .companies__title {
         padding-right: 18px;
+
     }
 
     .companies.open {
@@ -1961,7 +1966,7 @@ picture {
     }
 
     .cookie {
-        padding-top: 70px;
+        padding-top: 40px;
         padding-bottom: 26px;
         width: 330px;
     }
@@ -2044,8 +2049,8 @@ picture {
     }
 
     .map {
-        margin-top: 40px;
-        height: 175px;
+        margin-top: 0px;
+        height: 47vw;
     }
 
     .coex__button {
@@ -2116,6 +2121,9 @@ picture {
 
     .coexmt__content {
         gap: 32px;
+        max-width: 335px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .coexmt__list {
@@ -2140,13 +2148,7 @@ picture {
         border-radius: 4px;
     }
 
-    .coexmt__start {
-        margin-right: -24px;
-    }
 
-    .coexmt__end {
-        margin-left: -24px;
-    }
 
     .coexmt {
         margin-bottom: 10px;
@@ -2177,8 +2179,8 @@ picture {
 
     .swapster__picture {
         margin-top: 0px;
-        width: 86%;
-        margin-left: -7%;
+        width: 50%;
+        margin-left: -4%;
     }
 
     .swapster__picture::before {
@@ -2207,6 +2209,8 @@ picture {
         padding-left: 8px;
         padding-right: 4px;
         gap: 18px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .swapster__body {
@@ -2217,8 +2221,9 @@ picture {
     .senses__body {
         border-radius: 10px;
         padding: 28px 14px;
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 335px;
     }
 
     .senses__logo::before {
@@ -2236,7 +2241,8 @@ picture {
     }
 
     .senses__list {
-        gap: 30px 55px;
+        gap: 30px 10px;
+        justify-content: space-between;
     }
 
     .senses__picture {
@@ -2286,6 +2292,12 @@ picture {
         padding-top: 65px;
         background: var(--black);
         padding-bottom: 40px;
+    }
+
+    .side__body {
+        max-width: 335px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
 
@@ -2360,6 +2372,7 @@ picture {
         align-items: center;
         gap: 28px;
         margin-bottom: 65px;
+
     }
 
     .letter__text {
@@ -2415,7 +2428,7 @@ picture {
 
     .form__button {
         margin-top: 5px;
-       min-width: 138px !important;
+        min-width: 138px !important;
         font-size: 12px;
         line-height: 150%;
     }
@@ -2504,6 +2517,44 @@ picture {
     }
 
 
+}
+
+@media (max-width: 700px) {
+    .map {
+        margin-top: 40px;
+    }
+
+    .about__item {
+        width: calc((100% - 14px) / 2);
+    }
+
+    .form__middle .form__block {
+        max-width: calc((100% - 14px) / 2);
+    }
+
+    .swapster__picture {
+        margin-top: 0px;
+        width: 86%;
+        margin-left: -7%;
+    }
+}
+
+@media (max-width: 400px) {
+    .coexmt__start {
+        margin-right: -24px;
+    }
+
+    .coexmt__end {
+        margin-left: -24px;
+    }
+
+    .side__item:nth-child(3) {
+        max-width: calc(100% - 160px);
+    }
+
+    .side__picture {
+        width:  calc(100% - 160px);
+    }
 }
 
 

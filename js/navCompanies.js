@@ -57,16 +57,16 @@ export const navCompanies = () => {
     }
 
 
-    const links = document.getElementsByTagName('a')
-    Array.from(links).forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            nav.classList.remove('open')
-            // console.log(this.hash)
-            document.querySelector(this.hash).scrollIntoView({
-                behavior: "smooth"
-            });
-        })
-    })
+    // const links = document.getElementsByTagName('a')
+    // Array.from(links).forEach(link => {
+    //     link.addEventListener('click', function (e) {
+    //         e.preventDefault();
+    //         nav.classList.remove('open')
+    //         // console.log(this.hash)
+    //         document.querySelector(this.hash).scrollIntoView({
+    //             behavior: "smooth"
+    //         });
+    //     })
+    // })
 
 }
