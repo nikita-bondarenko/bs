@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/svg" href="./img/top-logo.svg">
     <title>BS группа компаний</title>
@@ -15,7 +15,7 @@
     <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
-    <script defer type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 
 </head>
 <body>
@@ -68,10 +68,10 @@
         </header>
 
         <section id="hero" class="hero container">
-            <dib class="hero__top">
+            <div class="hero__top">
                 <div class="hero__logo icon-logo-small"></div>
                 <h1 class="hero__title">bs группа компаний</h1>
-            </dib>
+            </div>
 
             <a href="#about" class="hero__button button">Узнать о компании</a>
         </section>
@@ -79,7 +79,8 @@
             <p class="about__description">BS Company — симбиоз профессионализма, многолетнего опыта и современного
                 подхода к ведению бизнеса.
             </p>
-            <p class="about__subdescription"> Мощная юридическая база, финансовая&nbsp;грамотность и передовые информационные&nbsp;технологии
+            <p class="about__subdescription"> Мощная юридическая база, финансовая&nbsp;грамотность и передовые
+                информационные&nbsp;технологии
                 — верхушка айсберга в нашем арсенале возможностей</p>
             <ul class="about__list">
                 <li class="about__item border_radius">
@@ -176,6 +177,7 @@
                         Грузии.</p>
                 </li>
             </ul>
+        </div>
     </section>
     <section id="coexmt" class="coexmt container">
         <div class="coexmt__title title">
@@ -221,10 +223,8 @@
                     <span class="coexmt__text">Помощь в сделках с недвижимостью: Турция, Грузия, Кипр, Израиль, Португалия, ОАЭ, Бали</span>
                 </li>
             </ul>
-
         </div>
     </section>
-    </div>
     <div class="dark-sections">
         <div class="dark-sections__shadow parent-size"></div>
 
@@ -385,7 +385,7 @@
                                                   target="_blank">Telegram</a> для бесплатной первичной
                 консультации <span class="letter__strong">или оставьте заявку на сайте</span>.
             </p>
-            <form id="form" class="letter__form form" action="">
+            <form id="form" class="letter__form form" action="#">
                 <div class="form__section">
                     <div class="form__block">
                         <label class="form__label" for="name">Введите ваше имя</label>
@@ -409,7 +409,7 @@
                 <div class="form__section">
                     <div class="form__block">
                         <label class="form__label" for="textarea">Ваш комментарий</label>
-                        <textarea class="form__input form__textarea" name="textarea" rows="4" id="textarea" type="text"
+                        <textarea class="form__input form__textarea" name="textarea" rows="4" id="textarea"
                                   placeholder="Напишите свой вопрос"></textarea>
                     </div>
                 </div>

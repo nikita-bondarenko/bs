@@ -8,13 +8,15 @@ export const form = () => {
         errorPopupClass = 'error',
         animationDuration = 300
     let isPopupOpen = false
+    let closeTimeoutId
 
     const closePopup = () => {
         popup.classList.remove(openPopupClass)
         popup.classList.add(closingPopupClass)
+        clearTimeout(closeTimeoutId)
         setTimeout(() => {
-            popup.classList.remove(closingPopupClass, errorPopupClass)
             isPopupOpen = false
+            popup.classList.remove(closingPopupClass, errorPopupClass)
         }, animationDuration)
         form.name.value = ''
         form.email.value = ''
@@ -28,7 +30,7 @@ export const form = () => {
             isPopupOpen = true
         }, animationDuration)
 
-        setTimeout(() => {
+        closeTimeoutId =  setTimeout(() => {
             closePopup()
         }, 5000)
     }
@@ -53,7 +55,7 @@ export const form = () => {
         if (!isPopupOpen) {
             const isFormValid = validateForm(form)
             if (isFormValid) {
-
+                openPopup()
                 sendMail()
             }
         }
