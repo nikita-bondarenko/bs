@@ -12,6 +12,8 @@ function _cleardigit ($string) // Функция удаляет все кром�
 	return $string;
 }
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST')
+
 if (ISSET($_POST['surname_ssc']))
 {
 	if (($_POST['surname_ssc'] != '')) { die; };
@@ -61,3 +63,6 @@ if (ISSET($_POST['name']))
     $result_f = array('Result' => $mes1, 'Value' => $mes2); 		
 	echo json_encode($result_f); 
 }
+
+endif;
+?>
