@@ -53,7 +53,7 @@ export const form = () => {
         if (!isPopupOpen) {
             const isFormValid = validateForm(form)
             if (isFormValid) {
-                openPopup()
+
                 sendMail()
             }
         }
@@ -61,47 +61,27 @@ export const form = () => {
 
     function sendMail() {
 
-        const formData = new FormData ()
+        const formData = new FormData()
 
         formData.append('name', form.name.value.trim())
         formData.append('email', form.email.value.trim())
         formData.append('phone', form.phone.value.trim())
         formData.append('comment', form.textarea.value.trim())
 
-        fetch('mailto:AhaitukiApratihata@yandex.ru&body=привет?subject=вопрос')
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '/post.php', true);
+        xhr.send(formData);
 
-        // Email.send({
-        //     Host : "smtp.yandex.ru",
-        //     Username : "AhaitukiApratihata@yandex.ru",
-        //     Password : "tmyuvmtbzqhpojqk",
-        //     To : 'naradadasosmi@gmail.com',
-        //     From : "brajbas3@gmail.com",
-        //     Subject : "This is the subject",
-        //     Body : "And this is the body"
-        // }).then(
-        //     message => alert(message)
-        // );
+        xhr.onload = function () {
+            // do something to response
+            let res = JSON.parse(this.response);
 
-        // const xhr = new XMLHttpRequest();
-        // xhr.open('POST', '/post.php', true);
-        // xhr.send(formData);
-
-        // xhr.onload = function () {
-        //     let res = JSON.parse(this.response);
-        //     if (res.Result == 'ok') {
-        //       console.log('ok')
-        //     } else if (res.Result == 'error') {
-        //         console.log('error')
-        //     }
-        // };
-
-        // fetch('../example.php', {
-        //     method: 'POST',
-        //     body: formData,
-        //     headers: {
-        //         'Content-type': 'application/json'
-        //     }
-        // }).then(res => console.log(res)).catch(e => console.log(e))
+            if (res.Result == 'ok') {
+                openPopup()
+            } else if (res.Result == 'error') {
+                console.log('Письмо не отправилось')
+            }
+        };
 
     }
 
