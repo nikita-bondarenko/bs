@@ -28,6 +28,9 @@ export const form = () => {
             isPopupOpen = true
         }, animationDuration)
 
+        setTimeout(() => {
+            closePopup()
+        }, 5000)
     }
 
     const openErrorPopup = () => {
@@ -35,11 +38,11 @@ export const form = () => {
         isPopupOpen = true
     }
 
-    document.body.addEventListener('click', () => {
-        if (isPopupOpen) {
-            closePopup()
-        }
-    })
+    // document.body.addEventListener('click', () => {
+    //     if (isPopupOpen) {
+    //         closePopup()
+    //     }
+    // })
 
     popup.addEventListener('click', (e) => e.stopPropagation())
 
@@ -52,8 +55,6 @@ export const form = () => {
             if (isFormValid) {
                 openPopup()
                 sendMail()
-            } else {
-                openErrorPopup()
             }
         }
     })
@@ -67,9 +68,23 @@ export const form = () => {
         formData.append('phone', form.phone.value.trim())
         formData.append('comment', form.textarea.value.trim())
 
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', '/post.php', true);
-        xhr.send(formData);
+        fetch('mailto:AhaitukiApratihata@yandex.ru&body=привет?subject=вопрос')
+
+        // Email.send({
+        //     Host : "smtp.yandex.ru",
+        //     Username : "AhaitukiApratihata@yandex.ru",
+        //     Password : "tmyuvmtbzqhpojqk",
+        //     To : 'naradadasosmi@gmail.com',
+        //     From : "brajbas3@gmail.com",
+        //     Subject : "This is the subject",
+        //     Body : "And this is the body"
+        // }).then(
+        //     message => alert(message)
+        // );
+
+        // const xhr = new XMLHttpRequest();
+        // xhr.open('POST', '/post.php', true);
+        // xhr.send(formData);
 
         // xhr.onload = function () {
         //     let res = JSON.parse(this.response);

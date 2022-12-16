@@ -378,6 +378,8 @@ picture {
     padding: 52px;
     gap: 27px;
     background: rgba(255, 255, 255, 0.07);
+    -webkit-backdrop-filter: blur(8px);
+    -moz-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
@@ -876,6 +878,8 @@ picture {
     margin-left: -140px;
     margin-right: -140px;
     background: linear-gradient(113.03deg, rgba(69, 59, 217, 0.12) 3.72%, rgba(111, 44, 206, 0.12) 93.72%);
+    -webkit-backdrop-filter: blur(8px);
+    -moz-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
 }
 
@@ -1092,6 +1096,8 @@ picture {
     padding-bottom: 40px;
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(40px);
+    -moz-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     display: none;
     flex-direction: column;
@@ -1160,6 +1166,8 @@ picture {
     padding-bottom: 74px;
     background: rgba(0, 0, 0, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(40px);
+    -moz-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     display: none;
     flex-direction: column;
