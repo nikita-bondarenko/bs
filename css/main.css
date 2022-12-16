@@ -1903,7 +1903,7 @@ picture {
 
     .senses__content {
         position: relative;
-        max-width: 740px;
+
         margin-right: auto;
         margin-left: auto;
     }
@@ -1937,7 +1937,7 @@ picture {
 
     .side__body {
         position: relative;
-        max-width: 740px;
+
         margin-right: auto;
         margin-left: auto;
     }
@@ -2182,6 +2182,10 @@ picture {
         max-width: 300px !important;
     }
 
+    .side__body {
+        max-width: 740px;
+    }
+
     .side__text {
         max-width: 300px;
     }
@@ -2235,6 +2239,10 @@ picture {
 
     .header__logo::before {
         font-size: 33px;
+    }
+
+    .senses__content {
+        max-width: 740px;
     }
 
 }
