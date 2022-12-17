@@ -55,7 +55,7 @@ export const form = () => {
         if (!isPopupOpen) {
             const isFormValid = validateForm(form)
             if (isFormValid) {
-                openPopup()
+
                 sendMail()
             }
         }
@@ -75,11 +75,8 @@ export const form = () => {
             body: formData
         });
         if (response.ok) {
-            let result = await response.json();
-            alert(result.message);
+            openPopup()
             firstForm.reset();
-        } else {
-            alert("Ошибка");
         }
 
         // const xhr = new XMLHttpRequest();
