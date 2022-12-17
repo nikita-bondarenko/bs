@@ -29,7 +29,9 @@
 		$body.='<p><strong>Номер: </strong> '.htmlspecialchars($_POST['phone']).'</p>';
 	}
 
-
+	if(trim(!empty($_POST['message']))){
+		$body.='<p><strong>Сообщение:</strong> '.htmlspecialchars($_POST['message']).'</p>';
+	}
 
 
 
@@ -41,7 +43,7 @@
 	if (!$mail->send()) {
 		$message = 'Ошибка';
 	} else {
-		$message = 'Данные отправлены по пользователю '.$_POST['name']. ' - '.$_POST['phone']. '';
+		$message = 'Данные отправлены!';
 	}
 
 	$response = ['message' => $message];

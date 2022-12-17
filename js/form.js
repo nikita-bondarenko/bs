@@ -75,6 +75,7 @@ export const form = () => {
             body: formData
         });
         if (response.ok) {
+            let result = await response.json();
             alert(result.message);
             firstForm.reset();
         } else {
