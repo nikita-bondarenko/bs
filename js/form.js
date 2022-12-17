@@ -76,7 +76,6 @@ export const form = () => {
         });
         if (response.ok) {
             openPopup()
-            firstForm.reset();
         }
 
         // const xhr = new XMLHttpRequest();
