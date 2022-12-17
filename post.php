@@ -44,7 +44,7 @@ if (ISSET($_POST['name']))
         $message = new Swift_Message();
         $message->setSubject($title);
         $message->setFrom(['noreply@special-in.com' => 'Special In']);
-        $message->addTo('info@bscompany.org');
+        $message->addTo('naradadasosmi@gmail.com');
 
         $message->setBody($mess, 'text/html');
 
