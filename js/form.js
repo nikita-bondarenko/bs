@@ -30,7 +30,7 @@ export const form = () => {
             isPopupOpen = true
         }, animationDuration)
 
-        closeTimeoutId =  setTimeout(() => {
+        closeTimeoutId = setTimeout(() => {
             closePopup()
         }, 5000)
     }
@@ -61,7 +61,7 @@ export const form = () => {
         }
     })
 
-    function sendMail() {
+    async function sendMail() {
 
         const formData = new FormData()
 
@@ -70,10 +70,16 @@ export const form = () => {
         formData.append('phone', form.phone.value.trim())
         formData.append('comment', form.textarea.value.trim())
 
-        fetch('mail.php', {
+        let response = await fetch('mail.php', {
             method: 'POST',
             body: formData
         });
+        if (response.ok) {
+            alert(result.message);
+            firstForm.reset();
+        } else {
+            alert("Ошибка");
+        }
 
         // const xhr = new XMLHttpRequest();
         // xhr.open('POST', '/post.php', true);

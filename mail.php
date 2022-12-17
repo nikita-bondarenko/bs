@@ -11,29 +11,29 @@
 	$mail->IsHTML(true);
 
 	//От кого письмо
-	$mail->setFrom('brajbas3@gmail.com', 'BS группа компаний');
+	$mail->setFrom('naradadasosmi@gmail.com', 'Дешевый одностраничник');
 	//Кому отправить
-	$mail->addAddress('naradadasosmi@gmail.com');
+	$mail->addAddress('brajbas3@gmail.com');
 	//Тема письма
-	$mail->Subject = 'Сообщение с сайта "BS группа компаний"';
+	$mail->Subject = 'Кадастровая стоимость';
 
-	$body = '<h1>Письмо от '.htmlspecialchars($_POST['name']).'</h1>';
-	
+
+
+	$body = '<h1>Проконсультируй меня, пожалуйста!</h1>';
+
 	if(trim(!empty($_POST['name']))){
 		$body.='<p><strong>Имя:</strong> '.htmlspecialchars($_POST['name']).'</p>';
 	}
 
-	if(trim(!empty($_POST['email']))){
-		$body.='<p><strong>Email: </strong> '.htmlspecialchars($_POST['email']).'</p>';
+	if(trim(!empty($_POST['phone']))){
+		$body.='<p><strong>Номер: </strong> '.htmlspecialchars($_POST['phone']).'</p>';
 	}
 
-	if(trim(!empty($_POST['phone']))){
-    		$body.='<p><strong>Номер: </strong> '.htmlspecialchars($_POST['phone']).'</p>';
-    	}
 
-    		if(trim(!empty($_POST['comment']))){
-            		$body.='<p><strong>Комментарий: </strong> '.htmlspecialchars($_POST['comment']).'</p>';
-            	}
+
+
+
+
 
 	$mail->Body = $body;
 
