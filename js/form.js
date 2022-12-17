@@ -70,20 +70,25 @@ export const form = () => {
         formData.append('phone', form.phone.value.trim())
         formData.append('comment', form.textarea.value.trim())
 
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', '/post.php', true);
-        xhr.send(formData);
+        fetch('mail.php', {
+            method: 'POST',
+            body: formData
+        });
 
-        xhr.onload = function () {
-            // do something to response
-            let res = JSON.parse(this.response);
-
-            if (res.Result == 'ok') {
-                openPopup()
-            } else if (res.Result == 'error') {
-                console.log('Письмо не отправилось')
-            }
-        };
+        // const xhr = new XMLHttpRequest();
+        // xhr.open('POST', '/post.php', true);
+        // xhr.send(formData);
+        //
+        // xhr.onload = function () {
+        //     // do something to response
+        //     let res = JSON.parse(this.response);
+        //
+        //     if (res.Result == 'ok') {
+        //         openPopup()
+        //     } else if (res.Result == 'error') {
+        //         console.log('Письмо не отправилось')
+        //     }
+        // };
 
     }
 
