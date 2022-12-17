@@ -11,9 +11,9 @@
 	$mail->IsHTML(true);
 
 	//От кого письмо
-	$mail->setFrom('noreply@special-in.com', 'BS группа компаний');
+	$mail->setFrom('naradadasosmi@gmail.com', 'BS группа компаний');
 	//Кому отправить
-	$mail->addAddress('brajbas3@gmail.com');
+	$mail->addAddress(info@bscompany.org');
 	//Тема письма
 	$mail->Subject = 'Заявка с сайта';
 

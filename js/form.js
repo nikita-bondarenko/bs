@@ -124,7 +124,7 @@ function validateForm(form) {
     Array.from([form.name, form.email, form.phone]).forEach(input => {
         removeError(input.id)
         const isPhoneError = () => {
-            const stringOfNumbers = input.value.trim().split('').reduce((str, item) => Number(item) ? str + item : str, '')
+            const stringOfNumbers = input.value.trim().split('').reduce((str, item) => Number(item) || Number(item) === 0 ? str + item : str, '')
             return stringOfNumbers.length !== 11
         }
         const isEmailError = !input.value.includes('.') || !input.value.includes('@')
