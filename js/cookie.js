@@ -5,7 +5,7 @@ export const cookie = () => {
 
     setTimeout(() => {
         element.classList.add('open')
-    }, 3000)
+    }, 1000)
 
     agreeButton.addEventListener('click', () => {
         element.classList.remove('open')
