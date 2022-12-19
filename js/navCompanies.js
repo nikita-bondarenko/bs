@@ -11,12 +11,14 @@ export const navCompanies = () => {
 
     function open() {
         isOpening = true
-        Array.from(companiesList.children).map((item, index) => setTimeout(() => {
-            item.classList.add('open')
-            index === companiesList.children.length - 1 ? isOpening = false : 1
-            isOpen = true
-            isClosing ? close() : 1
-        }, index * queueDelay))
+        Array.from(companiesList.children).map((item, index) => {
+            setTimeout(() => {
+                item.classList.add('open')
+                index === companiesList.children.length - 1 ? isOpening = false : 1
+                isOpen = true
+                isClosing ? close() : 1
+            }, index * queueDelay)
+        })
     }
 
     function close() {
