@@ -2,6 +2,7 @@ export const nav = () => {
     const openButton = document.getElementById('nav-bar')
     const closeButton = document.getElementById('nav-close')
     const nav = document.getElementById('nav')
+    const links = document.getElementsByTagName('a')
 
     openButton.addEventListener('click', (e) => {
         e.stopPropagation()
@@ -19,5 +20,14 @@ export const nav = () => {
     nav.addEventListener('click', (e) => {
         e.stopPropagation()
     })
+
+    Array.from(links).forEach(link => link.addEventListener('click',  function(e) {
+
+        if(link.href.split('/').pop().startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(this.hash).scrollIntoView();
+        }
+
+    }))
 
 }

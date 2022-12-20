@@ -1378,7 +1378,7 @@ transform: translateY(2px);
     background: no-repeat url("../img/totop-arrow.svg");
     background-size: 24px 39px ;
     background-position-y: 10px;
-    animation: topBottom .5s ease-in-out alternate infinite;
+    /*animation: topBottom .5s ease-in-out alternate infinite;*/
     height: 50px;
     width: 24px;
     pointer-events: auto;
@@ -1931,9 +1931,9 @@ transform: translateY(-2px);
         max-width: 640px;
     }
 
-  .senses__item:nth-child(2) {
-      max-width: 238px;
-  }
+    .senses__item:nth-child(2) {
+        max-width: 238px;
+    }
 
     .senses__right {
         position: absolute;
@@ -1990,6 +1990,8 @@ transform: translateY(-2px);
     }
 
 }
+
+
 
 @media (max-width: 1500px) {
 
@@ -2484,8 +2486,10 @@ left: 52.2%;
 @media (max-width: 900px) {
 
     .letter__totop {
-        bottom: -32px;
+        bottom: -4px;
         right: 22px;
+        background-size: 12px 20px;
+        background-position: center;
     }
 
     * {
@@ -3324,6 +3328,7 @@ left: 52.2%;
 @media (max-width: 400px) {
 
 
+
     .swapster__button {
         margin-top: 0px;
     }
@@ -3378,8 +3383,20 @@ left: 52.2%;
     }
 }
 
+@media (max-width: 330px) {
+    .letter {
+        width: auto;
+    }
 
-@-webkit-keyframes appear {
+    .form__section {
+        width: 100%;
+        max-width: 260px;
+    }
+
+}
+
+
+    @-webkit-keyframes appear {
     from {
         -webkit-transform: translateX(200px);
         transform: translateX(200px);
