@@ -28,7 +28,7 @@
         <div id="particles-js"></div>
         <div id="particles-js3"></div>
         <div class="web-decor-top__angle"></div>
-        <header class="header">
+        <header id="top" class="header">
             <div class="header__body container">
                 <div class="header__logo icon-logo-small"></div>
                 <button id="nav-bar" class="header__bar icon-bar"></button>
@@ -141,8 +141,8 @@
             </div>
             <picture class="map__picture parent-size">
                 <source class="map__image" srcset="./img/map-mobile-1x.png 1x, ./img/map-mobile-2x.png 2x"
-                        media="(max-width: 500px)">
-                <source class="map__image" srcset="./img/map-mobile-2x.png 1x, ./img/map-mobile-3x.png 2x"
+                        media="(max-width: 400px)">
+                <source class="map__image" srcset="./img/map-desktop-1x.png 1x, ./img/map-desktop-1x.png 2x"
                         media="(max-width: 900px)">
                 <img class="map__image" src="./img/map-desktop-1x.png" srcset="./img/map-desktop-2x.png 2x" alt="Карта">
             </picture>
@@ -178,58 +178,59 @@
             </ul>
         </div>
     </section>
-    <section id="coexmt" class="coexmt container">
-        <div class="coexmt__title title">
-            <div class="title__logo coexmt__logo icon-coex-mt"></div>
-            <h2 class="title__text">Money transfer services</h2>
-        </div>
-        <div class="coexmt__start coexmt__content">
-            <ul class="coexmt__list">
-                <li class="coexmt__item">
-                    <span class="coexmt__decor icon-circle"></span>
-                    <span class="coexmt__text">Безналичные и наличные операции</span>
-                </li>
-                <li class="coexmt__item">
-                    <span class="coexmt__decor icon-circle"></span>
-                    <span class="coexmt__text">Перевод € и $ на карты физических лиц</span>
-                </li>
-                <li class="coexmt__item">
-                    <span class="coexmt__decor icon-circle"></span>
-                    <span class="coexmt__text">Пополнение банковских счетов компаний</span>
-                </li>
-            </ul>
-            <picture class="coexmt__picture border_radius">
-                <source class="coexmt__image" srcset="./img/hotel-mobile-1x.jpg 1x, ./img/hotel-mobile-2x.jpg 2x"
-                        media="(max-width: 900px)">
-                <img class="coexmt__image" src="./img/hotel-desktop-1x.jpg" srcset="./img/hotel-desktop-2x.jpg 2x"
-                     alt="Отель">
-            </picture>
-        </div>
-        <div class="coexmt__end coexmt__content">
-            <picture class="coexmt__picture border_radius">
-                <source class="coexmt__image" srcset="./img/ship-mobile-1x.jpg 1x, ./img/ship-mobile-2x.jpg 2x"
-                        media="(max-width: 900px)">
-                <img class="coexmt__image" src="./img/ship-desktop-1x.jpg" srcset="./img/ship-desktop-2x.jpg 2x"
-                     alt="Отель">
-            </picture>
-            <ul class="coexmt__list">
-                <li class="coexmt__item">
-                    <span class="coexmt__decor icon-circle"></span>
-                    <span class="coexmt__text">Оплата импорта и услуг в юанях</span>
-                </li>
-                <li class="coexmt__item">
-                    <span class="coexmt__decor icon-circle"></span>
-                    <span class="coexmt__text">Помощь в сделках с недвижимостью: Турция, Грузия, Кипр, Израиль, Португалия, ОАЭ, Бали</span>
-                </li>
-            </ul>
-        </div>
-    </section>
+<!--    <section id="coexmt" class="coexmt container">-->
+<!--        <div class="coexmt__title title">-->
+<!--            <div class="title__logo coexmt__logo icon-coex-mt"></div>-->
+<!--            <h2 class="title__text">Money transfer services</h2>-->
+<!--        </div>-->
+<!--        <div class="coexmt__start coexmt__content">-->
+<!--            <ul class="coexmt__list">-->
+<!--                <li class="coexmt__item">-->
+<!--                    <span class="coexmt__decor icon-circle"></span>-->
+<!--                    <span class="coexmt__text">Безналичные и наличные операции</span>-->
+<!--                </li>-->
+<!--                <li class="coexmt__item">-->
+<!--                    <span class="coexmt__decor icon-circle"></span>-->
+<!--                    <span class="coexmt__text">Перевод € и $ на карты физических лиц</span>-->
+<!--                </li>-->
+<!--                <li class="coexmt__item">-->
+<!--                    <span class="coexmt__decor icon-circle"></span>-->
+<!--                    <span class="coexmt__text">Пополнение банковских счетов компаний</span>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            <picture class="coexmt__picture border_radius">-->
+<!--                <source class="coexmt__image" srcset="./img/hotel-mobile-1x.jpg 1x, ./img/hotel-mobile-2x.jpg 2x"-->
+<!--                        media="(max-width: 900px)">-->
+<!--                <img class="coexmt__image" src="./img/hotel-desktop-1x.jpg" srcset="./img/hotel-desktop-2x.jpg 2x"-->
+<!--                     alt="Отель">-->
+<!--            </picture>-->
+<!--        </div>-->
+<!--        <div class="coexmt__end coexmt__content">-->
+<!--            <picture class="coexmt__picture border_radius">-->
+<!--                <source class="coexmt__image" srcset="./img/ship-mobile-1x.jpg 1x, ./img/ship-mobile-2x.jpg 2x"-->
+<!--                        media="(max-width: 900px)">-->
+<!--                <img class="coexmt__image" src="./img/ship-desktop-1x.jpg" srcset="./img/ship-desktop-2x.jpg 2x"-->
+<!--                     alt="Отель">-->
+<!--            </picture>-->
+<!--            <ul class="coexmt__list">-->
+<!--                <li class="coexmt__item">-->
+<!--                    <span class="coexmt__decor icon-circle"></span>-->
+<!--                    <span class="coexmt__text">Оплата импорта и услуг в юанях</span>-->
+<!--                </li>-->
+<!--                <li class="coexmt__item">-->
+<!--                    <span class="coexmt__decor icon-circle"></span>-->
+<!--                    <span class="coexmt__text">Помощь в сделках с недвижимостью: Турция, Грузия, Кипр, Израиль, Португалия, ОАЭ, Бали</span>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </section>-->
     <div class="dark-sections">
         <div class="dark-sections__shadow parent-size"></div>
 
         <div class="web-decor-middle">
 
             <div class="web-decor-middle__angle"></div>
+            <div class="web-decor-middle__angle_bottom"></div>
             <section id="swap" class="swapster ">
                 <div id="particles-js1"></div>
                 <div class="swapster__shadow"></div>
@@ -277,6 +278,7 @@
                 </div>
             </section>
             <section id="senses" class="senses">
+
                 <div class="container">
                     <div class="senses__body border_radius">
                         <div class="senses__title title">
@@ -372,8 +374,9 @@
         <div id="particles-js2"></div>
         <div class="web-decor-bottom__angle"></div>
         <section id="contacts" class="letter container">
+            <a href="#top" class="letter__totop"></a>
             <div id="popup" class="letter__popup popup border_radius">
-                <button id="popup-close" class="popup__close"></button>
+                <button  id="popup-close" class="popup__close"></button>
                 <h4 class="popup__title">Спасибо за заявку</h4>
                 <p class="popup__text">мы свяжемся с вами в ближайшее время</p>
                 <h4 class="popup__title error">Произошла ошибка при отправке</h4>
