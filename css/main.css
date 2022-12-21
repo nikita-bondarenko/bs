@@ -1950,7 +1950,7 @@ picture {
 }
 
 
-@media (max-width: 1750px) {
+@media screen and (max-width: 1750px) {
 
     /*.senses__picture {*/
     /*    margin-bottom: 80px;*/
@@ -2040,7 +2040,7 @@ picture {
 }
 
 
-@media (max-width: 1500px) {
+@media screen and (max-width: 1500px) {
 
     .side__list {
         gap: 60px 0px;
@@ -2088,7 +2088,7 @@ picture {
     }
 }
 
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
 
     .cookie {
         width: auto;
@@ -2279,7 +2279,7 @@ picture {
     }
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
 
 
     .senses__picture {
@@ -2573,7 +2573,7 @@ picture {
 }
 
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
 
     .title__logo::before {
         font-size: 60px;
@@ -2617,7 +2617,7 @@ picture {
     }
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
 
     .side__list {
         gap:20px 40px;
@@ -2635,7 +2635,7 @@ picture {
     }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
 
     .letter__totop {
         bottom: -4px;
@@ -3484,7 +3484,7 @@ picture {
 
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
     .map {
         margin-top: 15px;
     }
@@ -3504,7 +3504,7 @@ picture {
     }
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
 
 
     .swapster__button {
@@ -3553,7 +3553,7 @@ picture {
     }
 }
 
-@media (max-width: 370px) {
+@media screen and (max-width: 370px) {
     .side__picture {
         width: calc(100% - 160px);
         top: 82px;
@@ -3566,7 +3566,7 @@ picture {
 
 }
 
-@media (max-width: 330px) {
+@media screen and (max-width: 330px) {
     .letter {
         width: auto;
     }
