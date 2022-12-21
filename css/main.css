@@ -1,6 +1,4 @@
 
-
-
 /*https://www.figma.com/file/mcouYhjQoZygYyUkXIhIEu/Digital?node-id=116%3A2*/
 
 @font-face {
@@ -941,7 +939,7 @@ picture {
     position: absolute;
     bottom: -2px;
     right: 67px;
-    left: 125px;
+    left: 114px;
     height: 130px;
     background: -o-linear-gradient(top, rgba(12, 25, 39, 0.01) -2.65%, rgba(14, 26, 38, 0.98) 50.48%, #0B1319 89.45%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(-2.65%, rgba(12, 25, 39, 0.01)), color-stop(50.48%, rgba(14, 26, 38, 0.98)), color-stop(89.45%, #0B1319));
@@ -996,7 +994,7 @@ picture {
 }
 
 .swapster__item:nth-child(1) {
-    max-width: 405px;
+    max-width: 398px;
     margin-left: 0px;
 }
 
@@ -2026,9 +2024,195 @@ picture {
 
 @media (max-width: calc( 1600px )) {
 
-    .swapster__shadow {
-        display: none;
+
+
+    .cases {
+        gap: 60px 0;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
     }
+
+    .swapster__body {
+        margin-right: -50px;
+        margin-left: -30px;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+}
+
+
+@media (max-width: calc(1500px)) {
+
+    .swapster__decor {
+        width: 12px;
+        height: 12px;
+    }
+
+    .swapster__decor::before {
+        height: 79px;
+    }
+
+    .swapster__decor::after {
+        bottom: 79px;
+    }
+
+
+    .swapster__item:nth-child(1) .swapster__decor {
+        -webkit-transform: rotate(17deg);
+        -ms-transform: rotate(17deg);
+        transform: rotate(17deg);
+        left: 35%;
+        top: 179px;
+    }
+
+    .swapster__item:nth-child(1) .swapster__decor::before {
+        height: 145px;
+    }
+
+    .swapster__item:nth-child(1) .swapster__decor::after {
+        bottom: 145px;
+    }
+
+    .swapster__item:nth-child(2) .swapster__decor {
+        -webkit-transform: rotate(33deg);
+        -ms-transform: rotate(33deg);
+        transform: rotate(33deg);
+        left: 37.6%;
+        top: 188px;
+
+    }
+
+    .swapster__item:nth-child(2) .swapster__decor::before {
+        height: 123px;
+    }
+
+    .swapster__item:nth-child(2) .swapster__decor::after {
+        bottom: 123px;
+    }
+
+    .swapster__item:nth-child(3) .swapster__decor {
+        -webkit-transform: rotate(54deg);
+        -ms-transform: rotate(54deg);
+        transform: rotate(54deg);
+        left: 39.7%;
+        top: 205px;
+
+    }
+
+    .swapster__item:nth-child(3) .swapster__decor::before {
+        height: 99px;
+    }
+
+    .swapster__item:nth-child(3) .swapster__decor::after {
+        bottom: 99px;
+    }
+
+    .swapster__item:nth-child(4) .swapster__decor {
+        -webkit-transform: rotate(75deg);
+        -ms-transform: rotate(75deg);
+        transform: rotate(75deg);
+        left: 40.5%;
+        top: 227px;
+    }
+
+    .swapster__item:nth-child(5) .swapster__decor {
+        -webkit-transform: rotate(101deg);
+        -ms-transform: rotate(101deg);
+        transform: rotate(101deg);
+        left: 39.8%;
+        top: 250px;
+    }
+
+    .swapster__item:nth-child(2) {
+        margin-left: 60px;
+    }
+
+    .swapster__item:nth-child(3), .swapster__item:nth-child(4), .swapster__item:nth-child(5) {
+        margin-left: 99px;
+    }
+
+    .swapster__list {
+        margin-top: -24px;
+        gap: 26px;
+    }
+
+    .swapster__button {
+        left: 53%;
+        bottom: 16px;
+    }
+
+
+    .swapster__body {
+        margin-right: 0px;
+        margin-left: 0px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 0px;
+    }
+
+    .swapster__picture {
+        width: 407.78px;
+        height: 439.43px;
+    }
+
+    .swapster__picture::before {
+        right: 51px;
+        left: 86px;
+    }
+
+
+    .side__list {
+        gap: 60px 0px;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        max-width: calc(100% - 250px);
+    }
+
+    .side__text {
+        max-width: none !important;
+    }
+
+    .side__item {
+        max-width: calc(((100% - 30px)  / 2) - 15px) !important;
+    }
+
+    .side__item:nth-child(2n) {
+        max-width: calc(((100% - 30px) / 2) + 15px) !important;
+    }
+
+
+
+    .side__body {
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+    }
+
+    .side__picture {
+        height: auto;
+    }
+
+
+    .map {
+        margin-top: -10px;
+    }
+
+    .swapster__body {
+        position: relative;
+    }
+
+    .footer__list {
+        gap: 100px;
+    }
+}
+
+@media (max-width: calc(1300px)) {
+
 
     .swapster__picture {
         position: relative;
@@ -2073,6 +2257,7 @@ picture {
         -webkit-transform: translateX(49px);
         -ms-transform: translateX(49px);
         transform: translateX(49px);
+        gap: 35px;
     }
 
 
@@ -2124,71 +2309,15 @@ picture {
         margin-left: 0;
     }
 
+    .swapster {
+        margin-bottom: 120px;
+    }
+
     .swapster__button {
 
-        left: 105px;
-        bottom: 0px;
+        left: 510px;
+        bottom: -70px;
     }
-
-    .cases {
-        gap: 60px 0;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-    }
-}
-
-
-@media (max-width: calc(1500px)) {
-
-
-    .side__list {
-        gap: 60px 0px;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        max-width: calc(100% - 250px);
-    }
-
-    .side__text {
-        max-width: none !important;
-    }
-
-    .side__item {
-        max-width: calc(((100% - 30px)  / 2) - 15px) !important;
-    }
-
-    .side__item:nth-child(2n) {
-        max-width: calc(((100% - 30px) / 2) + 15px) !important;
-    }
-
-
-
-    .side__body {
-        -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-        align-items: stretch;
-    }
-
-    .side__picture {
-        height: auto;
-    }
-
-
-    .map {
-        margin-top: -10px;
-    }
-
-    .swapster__body {
-        position: relative;
-    }
-
-    .footer__list {
-        gap: 100px;
-    }
-}
-
-@media (max-width: calc(1300px)) {
 
     .cookie {
         width: auto;
@@ -2278,6 +2407,10 @@ picture {
 }
 
 @media (max-width: calc( 1200px)) {
+
+    .swapster {
+        margin-bottom: 80px;
+    }
 
 
     .senses__picture {
@@ -3640,8 +3773,6 @@ picture {
         opacity: 0;
     }
 }
-
-
 
 
 
