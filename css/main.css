@@ -3579,6 +3579,14 @@ picture {
 
 }
 
+@media (min-width: 2400px) {
+    .map .container {
+        padding-bottom: 300px;
+        padding-right: 50px;
+    }
+}
+
+
 
 @-webkit-keyframes appear {
     from {
