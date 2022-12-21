@@ -1150,6 +1150,7 @@ picture {
 
 .senses {
     padding-bottom: 170px;
+    position: relative;
 }
 
 .senses__logo::before {
