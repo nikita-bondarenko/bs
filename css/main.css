@@ -257,16 +257,16 @@ picture {
 }
 
 .companies__title {
-    position: relative;
-    padding-right: 28px;
-    cursor: default;
+    position: relative !important;
+    padding-right: 28px !important;
+    cursor: default !important;
 }
 
 .companies__title::before {
-    position: absolute;
-    top: 8px;
-    right: 0;
-    font-size: 9px;
+    position: absolute !important;
+    top: 8px !important;
+    right: 0 !important;
+    font-size: 9px !important;
 }
 
 .companies {
@@ -2697,12 +2697,12 @@ picture {
     }
 
     .companies__title::before {
-        top: 6px;
-        font-size: 6px;
+        top: 6px !important;
+        font-size: 6px !important;
     }
 
     .companies__title {
-        padding-right: 18px;
+        padding-right: 18px !important;
 
     }
 
