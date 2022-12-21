@@ -260,14 +260,9 @@ picture {
     position: relative !important;
     padding-right: 28px !important;
     cursor: default !important;
+    background: no-repeat right center/ 16px 10px url("../img/arrow-nav.svg");
 }
 
-.companies__title::before {
-    position: absolute !important;
-    top: 8px !important;
-    right: 0 !important;
-    font-size: 9px !important;
-}
 
 .companies {
     position: relative;
@@ -2618,6 +2613,8 @@ picture {
     .senses__picture {
         margin-bottom: 20px;
     }
+
+
 }
 
 @media (max-width: calc( 1000px) ) {
@@ -2703,7 +2700,8 @@ picture {
 
     .companies__title {
         padding-right: 18px !important;
-
+        background-position-y: 5px;
+        background-size: 11px 6px;
     }
 
     .companies.open {
