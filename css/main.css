@@ -699,6 +699,7 @@ picture {
 .coex__button {
     background: var(--borrow);
     color: var(--white);
+    position: relative;
 }
 
 .cases {
@@ -3712,12 +3713,38 @@ picture {
 
 }
 
+
+
 @media (min-width: 2400px) {
+
+    .coex__button {
+        position: absolute;
+        left: 42%;
+        bottom: -81px;
+    }
+
+    .map {
+        height: 18vw;
+    }
+
     .map .container {
-        padding-bottom: 300px;
-        padding-right: 50px;
+        padding-bottom: 8vw;
     }
 }
+
+
+@media (min-width: 3500px) {
+
+    .map {
+        height: 18vw;
+    }
+
+    .map .container {
+        padding-right: 0px;
+        padding-bottom: 4vw;
+    }
+}
+
 
 
 
