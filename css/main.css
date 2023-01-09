@@ -3734,6 +3734,10 @@ picture {
         bottom: -81px;
     }
 
+    .coex__map {
+        margin-bottom: 140px;
+    }
+
     .map {
         margin-top: -63px;
     }
