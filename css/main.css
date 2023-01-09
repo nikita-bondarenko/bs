@@ -1,3 +1,9 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 
 /*https://www.figma.com/file/mcouYhjQoZygYyUkXIhIEu/Digital?node-id=116%3A2*/
 
@@ -559,7 +565,7 @@ picture {
     width: 3px;
 }
 
-.coex__logo::before, .coexmt__logo::before {
+.coex__logo::before, .coex-second__logo::before {
     font-size: 87px;
 }
 
@@ -567,7 +573,7 @@ picture {
     color: var(--black);
 }
 
-.coex__logo::after, .coexmt__logo::after {
+.coex__logo::after, .coex-second__logo::after {
     height: 87px;
 }
 
@@ -576,7 +582,7 @@ picture {
 
 }
 
-.coex__title, .coexmt__title {
+.coex__title, .coex-second__title {
     margin-bottom: 90px;
 }
 
@@ -760,28 +766,28 @@ picture {
     margin-bottom: 80px;
 }
 
-.coexmt__logo::before, .coexmt__title .title__text {
-    color: var(--borrow);
+.coex-second__logo::before, .coex-second__title .title__text {
+    color: var(--black);
 }
 
-.coexmt__logo::after {
-    background: var(--borrow);
+.coex-second__logo::after {
+    background: var(--black);
 }
 
-.coexmt__content {
+.coex-second__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
     gap: 82px;
 }
 
-.coexmt__list {
+.coex-second__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -791,42 +797,52 @@ picture {
     flex-direction: column;
 }
 
-.coexmt__start {
-    margin-bottom: 120px;
+.coex-second__start {
+    margin-bottom: 60px;
 }
 
-.coexmt__start .coexmt__list {
+.coex-second__start .coex-second__list {
     gap: 71px;
+    -ms-flex-preferred-size: 46%;
+    flex-basis: 46%;
 }
 
-.coexmt__end .coexmt__list {
+.coex-second__end .coex-second__list {
     gap: 60px;
+    -ms-flex-preferred-size: 46%;
+    flex-basis: 46%;
 }
 
-.coexmt__end .coexmt__list {
-    max-width: 670px;
-}
+/*.coex-second__end .coex-second__list {*/
+/*    max-width: 670px;*/
+/*}*/
 
-.coexmt__item {
+.coex-second__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     gap: 20px;
 }
 
-.coexmt__picture {
+.coex-second__picture {
     overflow: hidden;
+    -ms-flex-preferred-size: 46%;
+    flex-basis: 46%;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
 }
 
-.coexmt__decor::before {
+.coex-second__decor::before {
     font-size: 25px;
+
 }
 
-.coexmt {
+.coex-second {
     margin-bottom: 50px;
 }
 
-.coexmt__text {
+.coex-second__text {
     font-weight: 400;
 }
 
@@ -1308,7 +1324,7 @@ picture {
 
 .side__decor::before {
     font-size: 23px;
-    color: #D9D9D9;
+    color: rgba(168, 173, 147, 0.7);
 }
 
 .side__text {
@@ -1939,9 +1955,6 @@ picture {
     /*.senses__picture {*/
     /*    margin-bottom: 80px;*/
     /*}*/
-
-
-
     .letter {
 
         width: -webkit-fit-content;
@@ -2023,8 +2036,7 @@ picture {
 
 }
 
-@media (max-width: calc( 1600px )) {
-
+@media (max-width: calc(1600px)) {
 
 
     .cases {
@@ -2179,13 +2191,12 @@ picture {
     }
 
     .side__item {
-        max-width: calc(((100% - 30px)  / 2) - 15px) !important;
+        max-width: calc(((100% - 30px) / 2) - 15px) !important;
     }
 
     .side__item:nth-child(2n) {
         max-width: calc(((100% - 30px) / 2) + 15px) !important;
     }
-
 
 
     .side__body {
@@ -2404,10 +2415,9 @@ picture {
     }
 
 
-
 }
 
-@media (max-width: calc( 1200px)) {
+@media (max-width: calc(1200px)) {
 
     .swapster {
         margin-bottom: 80px;
@@ -2677,6 +2687,7 @@ picture {
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%);
+        background: var(--black);
     }
 
     .coex__map {
@@ -2751,10 +2762,10 @@ picture {
 
 }
 
-@media (max-width: calc( 1000px) ) {
+@media (max-width: calc(1000px) ) {
 
     .side__list {
-        gap:20px 40px;
+        gap: 20px 40px;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2769,7 +2780,7 @@ picture {
     }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
 
     .letter__totop {
         bottom: -4px;
@@ -2992,7 +3003,7 @@ picture {
         display: none;
     }
 
-    .coex__logo::before, .coexmt__logo::before {
+    .coex__logo::before, .coex-second__logo::before {
         font-size: 44px;
     }
 
@@ -3099,62 +3110,64 @@ picture {
         margin-bottom: 40px;
     }
 
-    .coexmt__title .title__text {
-        border-color: var(--borrow);
+    .coex-second__title .title__text {
+        border-color: var(--black);
     }
 
-    .coexmt__start {
+    .coex-second__start {
         padding-top: 5px;
     }
 
-    .coexmt__item {
+    .coex-second__item {
         gap: 9px;
     }
 
-    .coexmt__decor::before {
+    .coex-second__decor::before {
         display: inline-block;
         margin-top: 2px;
         font-size: 10px;
-
+        color: rgba(168, 173, 147, 0.7);
     }
 
-    .coexmt__text {
+    .coex-second__text {
         max-width: 186px;
     }
 
-    .coexmt__content {
+    .coex-second__content {
         gap: 32px;
         max-width: 335px;
         margin-right: auto;
         margin-left: auto;
     }
 
-    .coexmt__list {
-        gap: 18px !important;
+    .coex-second__list {
+        gap: 16px !important;
+        -ms-flex-preferred-size: 47% !important;
+        flex-basis: 47% !important;
     }
 
-    .coexmt__start {
-        margin-bottom: 45px;
+    .coex-second__start {
+        margin-bottom: 31px;
     }
 
-    .coexmt__end .coexmt__list {
-        padding-top: 10px;
-        padding-bottom: 15px;
+    .coex-second__end .coex-second__list {
+        padding-top: 4px;
+        padding-bottom: 4px;
     }
+
 
 
     .border_radius {
         border-radius: 6px;
     }
 
-    .coexmt__picture {
+    .coex-second__picture {
         border-radius: 4px;
+        -ms-flex-preferred-size: 44%;
+        flex-basis: 44%;
     }
 
 
-    .coexmt {
-        margin-bottom: 10px;
-    }
 
     .swapster__logo::before {
         font-size: 27px;
@@ -3365,7 +3378,7 @@ picture {
     }
 
     .side__item:nth-child(3) {
-        max-width: calc(100% - 155px)!important;
+        max-width: calc(100% - 155px) !important;
     }
 
     .side__item:nth-child(2) {
@@ -3391,7 +3404,7 @@ picture {
 
     .side__decor::before {
         font-size: 8px;
-        color: #D9D9D9;
+        color: rgba(168, 173, 147, 0.7);
     }
 
     .side__item {
@@ -3619,7 +3632,7 @@ picture {
 
 }
 
-@media (max-width:700px) {
+@media (max-width: 700px) {
     .map {
         margin-top: 15px;
     }
@@ -3639,7 +3652,7 @@ picture {
     }
 }
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
 
 
     .swapster__button {
@@ -3665,14 +3678,13 @@ picture {
     }
 
 
-    .coexmt__start {
-        margin-right: -24px;
+    .coex-second__start {
+        /*margin-right: -24px;*/
     }
 
-    .coexmt__end {
-        margin-left: -24px;
+    .coex-second__end {
+        /*margin-left: -24px;*/
     }
-
 
 
     .swapster {
@@ -3688,7 +3700,7 @@ picture {
     }
 }
 
-@media (max-width:370px) {
+@media (max-width: 370px) {
     .side__picture {
         width: calc(100% - 160px);
         top: 82px;
@@ -3701,7 +3713,7 @@ picture {
 
 }
 
-@media (max-width:330px) {
+@media (max-width: 330px) {
     .letter {
         width: auto;
     }
@@ -3714,7 +3726,6 @@ picture {
 }
 
 
-
 @media (min-width: 2400px) {
 
     .coex__button {
@@ -3724,8 +3735,9 @@ picture {
     }
 
     .map {
-        height: 18vw;
+        margin-top: -63px;
     }
+
 
     .map .container {
         padding-bottom: 8vw;
@@ -3735,17 +3747,12 @@ picture {
 
 @media (min-width: 3500px) {
 
-    .map {
-        height: 18vw;
-    }
 
     .map .container {
         padding-right: 0px;
         padding-bottom: 4vw;
     }
 }
-
-
 
 
 @-webkit-keyframes appear {
@@ -3800,7 +3807,6 @@ picture {
         opacity: 0;
     }
 }
-
 
 
 
