@@ -28,14 +28,14 @@ require 'vendor/autoload.php';
     $mail->Subject = "Message from bscompany.org";
  
 	$body = "<h1>You've received one more message from website!</h1>";
+	
+	$body.='<p><strong>Name:</strong> '.htmlspecialchars(trim($_POST['name']),ENT_QUOTES, 'utf-8').'</p>';
 
-	$body.='<p><strong>Имя:</strong> '.htmlspecialchars($_POST['name']).'</p>';
+	$body.='<p><strong>Phone: </strong> '.htmlspecialchars(trim($_POST['phone']),ENT_QUOTES, 'utf-8').'</p>';
 
-	$body.='<p><strong>Номер: </strong> '.htmlspecialchars($_POST['phone']).'</p>';
+	$body.='<p><strong>Email:</strong> '.htmlspecialchars(trim($_POST['email']),ENT_QUOTES, 'utf-8').'</p>';
 
-	$body.='<p><strong>Email:</strong> '.htmlspecialchars($_POST['email']).'</p>';
-
-	$body.='<p><strong>Сообщение:</strong> '.htmlspecialchars($_POST['comment']).'</p>';
+	$body.='<p><strong>Message:</strong> '.htmlspecialchars(trim($_POST['comment']),ENT_QUOTES, 'utf-8').'</p>';
 
 	$mail->Body = $body;
 
