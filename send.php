@@ -29,20 +29,13 @@ require 'vendor/autoload.php';
  
 	$body = "<h1>You've received one more message from website!</h1>";
 
-	if(trim(!empty($_POST['name']))){
-		$body.='<p><strong>Имя:</strong> '.htmlspecialchars($_POST['name']).'</p>';
-	}
+	$body.='<p><strong>Имя:</strong> '.htmlspecialchars($_POST['name']).'</p>';
 
-	if(trim(!empty($_POST['phone']))){
-		$body.='<p><strong>Номер: </strong> '.htmlspecialchars($_POST['phone']).'</p>';
-	}
+	$body.='<p><strong>Номер: </strong> '.htmlspecialchars($_POST['phone']).'</p>';
 
-	if(trim(!empty($_POST['email']))){
-		$body.='<p><strong>Email:</strong> '.htmlspecialchars($_POST['email']).'</p>';
-	}
-	if(trim(!empty($_POST['comment']))){
-		$body.='<p><strong>Сообщение:</strong> '.htmlspecialchars($_POST['comment']).'</p>';
-	}
+	$body.='<p><strong>Email:</strong> '.htmlspecialchars($_POST['email']).'</p>';
+
+	$body.='<p><strong>Сообщение:</strong> '.htmlspecialchars($_POST['comment']).'</p>';
 
 	$mail->Body = $body;
 
