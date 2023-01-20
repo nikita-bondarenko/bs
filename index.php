@@ -35,7 +35,7 @@
     <script defer src="https://unpkg.com/imask@6.4.3/dist/imask.js"></script>
     <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     </script>
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/main.js?123456"></script>
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account

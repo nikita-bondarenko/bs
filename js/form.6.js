@@ -65,6 +65,8 @@ export const form = () => {
         formData.append('phone', form.phone.value.trim())
         formData.append('comment', form.textarea.value.trim())
 
+        console.log(formData)
+
 
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'send.php', true);

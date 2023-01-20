@@ -1,5 +1,5 @@
 import {navCompanies} from './navCompanies.js'
-import {form} from './form.3.js'
+import {form} from './form.6.js'
 import {cookie} from './cookie.js'
 import {nav} from './nav.js'
 // import {forcedOriginalScale} from './forcedOriginalScale.js'
