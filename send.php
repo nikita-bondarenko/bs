@@ -18,7 +18,7 @@ require 'vendor/autoload.php';
     $mail->Password = 'cgbftpsmcjfnohrj';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
-
+    $mail->CharSet = "utf-8";
     $mail->setFrom('naradadasosmi@gmail.com');
 
     $mail->addAddress("info@bscompany.org");
