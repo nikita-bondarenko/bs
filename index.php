@@ -5,7 +5,6 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=0.5">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/svg" href="./img/favicon.svg">
     <title>BS группа компаний</title>
     <meta name="description" content="BS Company — симбиоз профессионализма, многолетнего опыта и современного подхода к ведению бизнеса. Мощная юридическая база, финансовая грамотность и передовые информационные технологии — верхушка айсберга в нашем арсенале возможностей.">
     <meta name="theme-color" content="#181818">
@@ -28,16 +27,21 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:image" content="https://bscompany.org/img/share_1200.jpg">
     <meta name="twitter:creator" content="@">
+    <link rel="shortcut icon" href="https://bscompany.org/img/favicon.ico" type="image/vnd.microsoft.icon" >
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/iconsfont.css">
     <link rel="stylesheet" href="./css/particles.css">
     <link rel="stylesheet" href="./css/main.css">
     <script defer src="https://unpkg.com/imask@6.4.3/dist/imask.js"></script>
     <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <script type="module" src="./js/main.js"></script>
-
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('xKRRhgDoVm11vSTNi');
+        })();
+    </script>
 </head>
 <body id="main">
 <main >

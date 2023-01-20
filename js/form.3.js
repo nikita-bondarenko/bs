@@ -40,11 +40,6 @@ export const form = () => {
         isPopupOpen = true
     }
 
-    // document.body.addEventListener('click', () => {
-    //     if (isPopupOpen) {
-    //         closePopup()
-    //     }
-    // })
 
     popup.addEventListener('click', (e) => e.stopPropagation())
 
@@ -70,28 +65,19 @@ export const form = () => {
         formData.append('phone', form.phone.value.trim())
         formData.append('comment', form.textarea.value.trim())
 
-        let response = await fetch('mail.php', {
-            method: 'POST',
-            body: formData
-        });
-        if (response.ok) {
-            openPopup()
-        }
 
-        // const xhr = new XMLHttpRequest();
-        // xhr.open('POST', '/post.php', true);
-        // xhr.send(formData);
-        //
-        // xhr.onload = function () {
-        //     // do something to response
-        //     let res = JSON.parse(this.response);
-        //
-        //     if (res.Result == 'ok') {
-        //         openPopup()
-        //     } else if (res.Result == 'error') {
-        //         console.log('Письмо не отправилось')
-        //     }
-        // };
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'send.php', true);
+        xhr.send(formData);
+
+        xhr.onload = function () {
+          
+            if (this.status == 200) {
+                openPopup()
+            } else {
+                console.log('Письмо не отправилось')
+            }
+        };
 
     }
 
